@@ -1,0 +1,51 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+.container {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    background: rgb(58, 58, 58);
+    border: 1px solid rgb(240, 7, 7);
+}
+
+.text-bgr {
+    position: absolute;
+    top: calc(45% - 100px);
+    left: calc(31% - 105px);
+}
+
+#img1 {
+    width: 100%;
+}
+#img2 {
+    display: none;
+    width: 100%;
+}
+
+
+.vards {
+    fill: rgb(255, 255, 255);
+    width: 25vw;
+}
+.vards:hover {
+    fill:rgb(240, 7, 7);
+    transition: .5s;
+}
+
+@media only screen and (max-width: 768px) {
+    #img1 {
+        display: none;
+    }
+    #img2 {
+        display: block;
+    }
+    .vards {
+        width: 50vw;
+    }
+    .text-bgr {
+        top: calc(50% - 0px);
+        left: calc(36% - 77px);
+    }
+  }
