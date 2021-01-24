@@ -76,6 +76,12 @@ img {
     width: 60px;
     margin-left: 50px;
 }
+#contacts > a:hover > svg {
+    width: 80px;
+    transition: .5s;
+}
+
+
 
 /* telefonam */
 
@@ -103,5 +109,4 @@ img {
     .text-layout-2 {
         width: 82%;
     }
-
-  }
+}
