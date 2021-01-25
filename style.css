@@ -36,7 +36,6 @@ body {
 .flex-container {
     display: flex;
     flex-direction: row-reverse;
-    
 }
 
 h1 {
@@ -54,6 +53,14 @@ h1 {
 }
 .text-layout-1 {
     width: 20%;
+}
+.text-layout-3 {
+    width: 30%;
+    height: 200px;
+    margin: 48px;
+    padding: 6px 16px;
+    background: rgb(83, 83, 83);
+    box-shadow: 5px 5px 4px rgba(255, 255, 255, 0.301)
 }
 
 p {
@@ -74,7 +81,7 @@ img {
   
 #contacts > a > svg {
     width: 60px;
-    margin-left: 50px;
+    margin: 0 25px 0 25px;
 }
 #contacts > a:hover > svg {
     width: 80px;
