@@ -54,7 +54,7 @@ body, html {
 
 .flex-container {
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: space-between;
 }
 
 h1 {
@@ -74,12 +74,18 @@ h1 {
     width: 20%;
 }
 .text-layout-3 {
-    width: 30%;
-    height: 200px;
-    margin: 48px;
-    padding: 6px 16px;
-    background: rgb(83, 83, 83);
-    box-shadow: 5px 5px 4px rgba(255, 255, 255, 0.301)
+    margin: 20px;
+    margin-top: 25px;
+    text-align: center;
+    height: calc(100% - 186px);
+    height: 9em;
+    /* background: rgba(104, 104, 104, 0.144);
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.301); */
+}
+.text-layout-3 > img {
+    
+    width: 80%;
+    height: 80%;
 }
 
 p {
