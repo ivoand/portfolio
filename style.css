@@ -1,20 +1,34 @@
-body {
+
+
+body, html {
     font-family: 'Montserrat', sans-serif;
-    color: #fff;
+    height: 100%;
+    color: white;
+    background-image: url('ivoand_full.jpg');
+    background-attachment: fixed;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+.parallax {
+    width: 100%;
+    height: 100vh;
+  }
+
 .container {
     position: relative;
     margin: 0;
     width: 100%;
     height: fit-content;
-    background: rgb(58, 58, 58);
+    background: rgba(71, 71, 71, 0.397);
     border-bottom: 1px solid rgb(41, 41, 41);
 }
+
 
 .logo-layout {
     position: absolute;
     top: calc(45% - 100px);
-    left: calc(31% - 105px);
+    left: calc(20% - 105px);
 }
 
 #img1 {
@@ -25,14 +39,19 @@ body {
     display: none;
     width: 100%;
 }
+
 .vards {
     fill: rgb(255, 255, 255);
-    width: 25vw;
+    width: 40vw;
 }
-.vards:hover {
-    fill:rgb(240, 7, 7);
-    transition: .5s;
-}
+@keyframes colorise {
+    0%   {fill: red; animation-duration: 4s;}
+    25%  {fill: yellow;}
+    50%  {fill: blue;}
+    100% {fill: red;}
+    
+  }
+
 .flex-container {
     display: flex;
     flex-direction: row-reverse;
@@ -48,8 +67,8 @@ h1 {
     height: fit-content;
     margin: 48px;
     padding: 6px 16px;
-    background: rgb(83, 83, 83);
-    box-shadow: 5px 5px 4px rgba(255, 255, 255, 0.301)
+    background: rgba(104, 104, 104, 0.144);
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.301)
 }
 .text-layout-1 {
     width: 20%;
@@ -82,22 +101,40 @@ img {
 #contacts > a > svg {
     width: 60px;
     margin: 0 25px 0 25px;
-}
-#contacts > a:hover > svg {
-    width: 80px;
-    transition: .5s;
+    
 }
 
+
+/* hover līdz telefona formātam */
+
+@media only screen and (min-width: 768px) {
+    .vards:hover {
+        animation: colorise 5s infinite;
+    }
+    #contacts > a:hover > svg {
+        width: 80px;
+        transition: .5s;
+        transform: rotate(720deg);
+    }
+}
 
 
 /* telefonam */
 
 @media only screen and (max-width: 768px) {
+    body, html {
+        background-image: url('ivoand_mob.jpg');
+        background-position: top;
+    }
     #img1 {
         display: none;
     }
     #img2 {
         display: block;
+    }
+    .logo-layout {
+        top: calc(75% - 100px);
+        left: calc(35% - 105px);
     }
     .vards {
         width: 50vw;
