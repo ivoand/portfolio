@@ -124,7 +124,7 @@ img {
 @media only screen and (max-width: 768px) {
     body, html {
         background-image: url('ivoand_mob.jpg');
-        background-position: top;
+        background-attachment: fixed;
     }
     #img1 {
         display: none;
