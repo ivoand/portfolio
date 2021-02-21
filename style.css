@@ -58,11 +58,11 @@ html {
 .language-btn span {
   text-shadow: 1px 1px 5px rgb(255, 255, 255);
   animation-name: flash;
-  animation-duration: 4s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
 }
 .language-btn:nth-child(2) span {
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 
 .language-btn:hover span {
@@ -107,7 +107,7 @@ html {
   }
   25%,
   75% {
-    opacity: 0;
+    opacity: 0.3;
   }
 }
 
@@ -163,7 +163,7 @@ img {
 }
 
 #contacts > a > svg {
-  width: 60px;
+  width: 40px;
   margin: 0 25px 0 25px;
 }
 
@@ -171,13 +171,12 @@ img {
 
 @media only screen and (min-width: 768px) {
   .my-name:hover span {
-    /* color: rgb(161, 0, 0);
-    transition: 1s; */
-    animation-name: flash;
-    animation-duration: 3s;
+    color: rgb(161, 0, 0);
+    transition: 1s;
+    
   }
   #contacts > a:hover > svg {
-    width: 80px;
+    width: 65px;
     transition: 0.5s;
     transform: rotate(720deg);
   }
