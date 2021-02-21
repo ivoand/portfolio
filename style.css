@@ -1,162 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 
-
-body, html {
-    font-family: 'Montserrat', sans-serif;
-    height: 100%;
-    color: white;
-    background-image: url('ivoand_full.jpg');
-    background-attachment: fixed;
-    background-position: right top;
-    background-repeat: no-repeat;
-    background-size: cover;
+body,
+html {
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
+  height: 100%;
+  color: rgb(255, 255, 255);
+  background-image: url("ivoand_full.jpg");
+  background-attachment: fixed;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 .parallax {
-    width: 100%;
-    height: 100vh;
-  }
+  width: 100%;
+  height: 100vh;
+}
+
+.parallax-layout {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: fit-content;
+  background: linear-gradient(
+    rgba(54, 54, 54, 0.514),
+    rgba(255, 255, 255, 0.658)
+  );
+  border-bottom: 1px solid rgb(41, 41, 41);
+}
 
 .container {
-    position: relative;
-    margin: 0;
-    width: 100%;
-    height: fit-content;
-    background: rgba(71, 71, 71, 0.397);
-    border-bottom: 1px solid rgb(41, 41, 41);
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: fit-content;
+  border-bottom: 1px solid rgb(41, 41, 41);
+}
+.lang-bgr {
+  display: inline-block;
+}
+.lang-bgr:hover .language-btn span {
+  animation: none;
 }
 
+.language-btn {
+  display: inline-block;
+  box-shadow: 1px 1px 3px rgba(190, 190, 190, 0.548);
+  padding: 9px 6px;
+  text-decoration: none;
+  color: rgb(196, 196, 196);
+  border-radius: 3px;
+  text-align: center;
+  font-size: 20px;
+  width: 50px;
+}
+.language-btn span {
+  text-shadow: 1px 1px 5px rgb(255, 255, 255);
+  animation-name: flash;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+.language-btn:nth-child(2) span {
+  animation-delay: 1s;
+}
+
+.language-btn:hover span {
+  color: red;
+  text-shadow: 1px 1px 2px white;
+}
+
+.language-btn:active {
+  box-shadow: 1px 1px 6px rgb(190, 190, 190);
+  font-size: 18px;
+}
 
 .logo-layout {
-    position: absolute;
-    top: calc(45% - 100px);
-    left: calc(20% - 105px);
+  position: absolute;
+  top: calc(45% - 100px);
+  left: calc(20% - 105px);
 }
 
 #img1 {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 #img2 {
-    display: none;
-    width: 100%;
+  display: none;
+  width: 100%;
 }
 
-.vards {
-    fill: rgb(255, 255, 255);
-    width: 40vw;
+.my-name {
+  color: rgb(255, 255, 255);
+  font-family: "Righteous", cursive;
+  font-size: 100px;
 }
-@keyframes colorise {
-    0%   {fill: red; animation-duration: 4s;}
-    25%  {fill: yellow;}
-    50%  {fill: blue;}
-    100% {fill: red;}
-    
+.logo-layout > div {
+  text-shadow: 1px 1px 3px rgb(117, 117, 117);
+}
+
+@keyframes flash {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
   }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
 
 .flex-container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 h1 {
-    margin: 0;
-    padding-top: 30px;
-    text-align: center;
+  margin: 0;
+  padding-top: 30px;
+  text-align: center;
 }
-.text-layout-1, .text-layout-2 {
-    width: 60%;
-    height: fit-content;
-    margin: 48px;
-    padding: 6px 16px;
-    background: rgba(104, 104, 104, 0.144);
-    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.301)
+.text-layout-1,
+.text-layout-2 {
+  width: 60%;
+  height: fit-content;
+  margin: 48px;
+  padding: 6px 16px;
+  background: rgba(104, 104, 104, 0.144);
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.301);
 }
 .text-layout-1 {
-    width: 20%;
+  width: 20%;
 }
 .text-layout-3 {
-    margin: 20px;
-    margin-top: 25px;
-    text-align: center;
-    height: calc(100% - 186px);
-    height: 9em;
-    /* background: rgba(104, 104, 104, 0.144);
+  margin: 20px;
+  margin-top: 25px;
+  text-align: center;
+  height: calc(100% - 186px);
+  height: 9em;
+  /* background: rgba(104, 104, 104, 0.144);
     box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.301); */
 }
 .text-layout-3 > img {
-    
-    width: 80%;
-    height: 80%;
+  width: 80%;
+  height: 80%;
 }
 
 p {
-    text-indent: 50px;
-    text-align: justify;
+  text-indent: 50px;
+  text-align: justify;
 }
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 #contacts {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    height: 130px;
-
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  height: 130px;
 }
-  
+
 #contacts > a > svg {
-    width: 60px;
-    margin: 0 25px 0 25px;
-    
+  width: 60px;
+  margin: 0 25px 0 25px;
 }
-
 
 /* hover līdz telefona formātam */
 
 @media only screen and (min-width: 768px) {
-    .vards:hover {
-        animation: colorise 5s infinite;
-    }
-    #contacts > a:hover > svg {
-        width: 80px;
-        transition: .5s;
-        transform: rotate(720deg);
-    }
+  .my-name:hover span {
+    /* color: rgb(161, 0, 0);
+    transition: 1s; */
+    animation-name: flash;
+    animation-duration: 3s;
+  }
+  #contacts > a:hover > svg {
+    width: 80px;
+    transition: 0.5s;
+    transform: rotate(720deg);
+  }
 }
-
 
 /* telefonam */
 
 @media only screen and (max-width: 768px) {
-    body, html {
-        background-image: url('ivoand_mob.jpg');
-        background-attachment: fixed;
-    }
-    #img1 {
-        display: none;
-    }
-    #img2 {
-        display: block;
-    }
-    .logo-layout {
-        top: calc(75% - 100px);
-        left: calc(35% - 105px);
-    }
-    .vards {
-        width: 50vw;
-    }
-    .text-bgr {
-        top: calc(50% - 0px);
-        left: calc(36% - 77px);
-    }
-    .flex-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .text-layout-1 {
-        width: 33%;
-    }
-    .text-layout-2 {
-        width: 82%;
-    }
+  body,
+  html {
+    background-image: url("ivoand_mob.jpg");
+    background-attachment: fixed;
+  }
+  #img1 {
+    display: none;
+  }
+  #img2 {
+    display: block;
+  }
+  .logo-layout {
+    top: calc(75% - 100px);
+    left: calc(35% - 105px);
+  }
+  .my-name {
+    width: 50vw;
+  }
+  .text-bgr {
+    top: calc(50% - 0px);
+    left: calc(36% - 77px);
+  }
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-layout-1 {
+    width: 33%;
+  }
+  .text-layout-2 {
+    width: 82%;
+  }
 }
