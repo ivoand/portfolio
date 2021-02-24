@@ -168,11 +168,11 @@ img {
 }
 .contact-bgr {
   display: flex;
-    justify-content: center;
-    justify-items: center;
-    padding: 20px;
-    flex-direction: column;
-    align-items: center;
+  justify-content: center;
+  justify-items: center;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
 }
 
 
@@ -210,10 +210,11 @@ img {
 }
 
 .hobby-container {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 .hobby-container > .text-layout-3 > img {
   height: 80%;
   width: auto;
@@ -280,20 +281,7 @@ button:hover {
   background-color: #45a049;
 }
 
-#star1 {
-  fill: rgb(251, 255, 0);
-}
-@keyframes fill {
-  0% {fill: rgba(255, 255, 0, 0);}
-  50% {fill: yellow;}
-  100% {fill: rgba(255, 255, 0, 0);}
-}
-#star2 {
-  /* fill: rgb(251, 255, 0); */
-  animation-name: fill;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
+
 
 /* hover līdz telefona formātam */
 
@@ -303,7 +291,7 @@ button:hover {
     transition: 1s;
     
   }
-  #contacts > a:hover > svg {
+  .social-container > a:hover > svg {
     animation-name: shake;
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
