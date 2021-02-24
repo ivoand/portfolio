@@ -32,11 +32,16 @@ html {
 
 .container {
   position: relative;
-  margin: 0;
-  width: 100%;
-  height: fit-content;
-  border-bottom: 1px solid rgb(41, 41, 41);
+    margin: 0;
+    width: 100%;
+    padding-bottom: 30px;
+    height: fit-content;
+    min-height: 24em;
+    box-shadow: 0px 4px 10px rgb(190 190 190 / 57%);
 }
+
+
+
 .lang-bgr {
   display: inline-block;
 }
@@ -58,11 +63,11 @@ html {
 .language-btn span {
   text-shadow: 1px 1px 5px rgb(255, 255, 255);
   animation-name: flash;
-  animation-duration: 8s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
 }
 .language-btn:nth-child(2) span {
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 .language-btn:hover span {
@@ -93,7 +98,7 @@ html {
 .my-name {
   color: rgb(255, 255, 255);
   font-family: "Righteous", cursive;
-  font-size: 100px;
+  font-size: 7vw;
 }
 .logo-layout > div {
   text-shadow: 1px 1px 3px rgb(117, 117, 117);
@@ -116,6 +121,12 @@ html {
   justify-content: space-between;
 }
 
+.skill-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 h1 {
   margin: 0;
   padding-top: 30px;
@@ -135,12 +146,12 @@ h1 {
 }
 .text-layout-3 {
   margin: 20px;
-  margin-top: 25px;
-  text-align: center;
-  height: calc(100% - 186px);
-  height: 9em;
-  /* background: rgba(104, 104, 104, 0.144);
-    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.301); */
+    margin-top: 25px;
+    text-align: center;
+    height: 9em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .text-layout-3 > img {
   width: 80%;
@@ -155,17 +166,121 @@ img {
   max-width: 100%;
   height: auto;
 }
-#contacts {
+.contact-bgr {
   display: flex;
-  justify-content: center;
-  justify-items: center;
-  height: 130px;
+    justify-content: center;
+    justify-items: center;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
 }
 
-#contacts > a > svg {
+
+.stars {
+  display: inline-flex;
+  width: 69%;
+}
+.star1 {
+  fill: rgb(251, 255, 0);
+}
+@keyframes fill {
+  0% {fill: rgba(255, 255, 0, 0);}
+  50% {fill: yellow;}
+  100% {fill: rgba(255, 255, 0, 0);}
+}
+.star2 {
+  /* fill: rgb(251, 255, 0); */
+  animation-name: fill;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.hobby-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+.hobby-container > .text-layout-3 > img {
+  height: 80%;
+  width: auto;
+  padding: 35px;
+}
+
+.social-container {
+  border-radius: 5px;
+    background-color: #f2f2f242;
+    box-shadow: 5px 5px 4px rgb(0 0 0 / 30%);
+    padding: 20px;
+    height: fit-content;
+    width: 75%;
+    margin: 5px;
+    text-align: center;
+}
+.social-container > a > svg {
   width: 40px;
   margin: 0 25px 0 25px;
 }
+
+.contact-container {
+  border-radius: 5px;
+    background-color: #f2f2f242;
+    box-shadow: 5px 5px 4px rgb(0 0 0 / 30%);
+    margin: 5px;
+    padding: 20px;
+    height: fit-content;
+    width: 75%;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=email] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+button {
+  background-color: #616161;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  box-shadow: 0px 0px 4px rgb(255, 0, 0);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
 
 /* hover līdz telefona formātam */
 
@@ -176,9 +291,9 @@ img {
     
   }
   #contacts > a:hover > svg {
-    width: 65px;
-    transition: 0.5s;
-    transform: rotate(720deg);
+    animation-name: shake;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
   }
 }
 
@@ -210,6 +325,7 @@ img {
   .flex-container {
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
   }
   .text-layout-1 {
     width: 33%;
