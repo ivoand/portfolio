@@ -189,7 +189,6 @@ img {
   100% {fill: rgba(255, 255, 0, 0);}
 }
 .star2 {
-  /* fill: rgb(251, 255, 0); */
   animation-name: fill;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -326,12 +325,14 @@ button:hover {
   .flex-container {
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
   }
   .text-layout-1 {
     width: 33%;
   }
   .text-layout-2 {
     width: 82%;
+  }
+  .hobby-container > .text-layout-3 > img {
+    padding: 20px;
   }
 }
