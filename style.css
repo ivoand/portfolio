@@ -280,7 +280,20 @@ button:hover {
   background-color: #45a049;
 }
 
-
+#star1 {
+  fill: rgb(251, 255, 0);
+}
+@keyframes fill {
+  0% {fill: rgba(255, 255, 0, 0);}
+  50% {fill: yellow;}
+  100% {fill: rgba(255, 255, 0, 0);}
+}
+#star2 {
+  /* fill: rgb(251, 255, 0); */
+  animation-name: fill;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
 
 /* hover līdz telefona formātam */
 
